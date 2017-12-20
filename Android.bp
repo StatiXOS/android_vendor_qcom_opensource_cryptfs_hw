@@ -17,6 +17,9 @@ cc_library_shared {
     shared_libs: commonSharedLibraries,
 
     product_variables: {
+            device_support_wait_for_qsee: {
+                cflags: ["-DSKIP_WAITING_FOR_QSEE"],
+            },
             device_support_legacy_hwfde: {
                 cflags: ["-DLEGACY_HW_DISK_ENCRYPTION"],
         },
